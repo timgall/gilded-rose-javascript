@@ -96,4 +96,11 @@ describe("updateQuality", () => {
     expect(testItem.sellIn).toBe(-1);
     expect(testItem.quality).toBe(0);
   });
+  it("conjured items degrate in quality twice as fast as normal items.", () => {
+    const testItem = new ConjuredItem("Conjured Mana Cake", 2, 10);
+    items.push(testItem);
+    updateQuality();
+    expect(testItem.sellIn).toBe(1);
+    expect(testItem.quality).toBe(8);
+  });
 });
