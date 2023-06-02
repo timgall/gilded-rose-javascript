@@ -8,6 +8,7 @@ import {
   LegendaryItem,
   ConcertItem,
   ConjuredItem,
+  makeItem,
 } from "./gilded-rose.js";
 
 describe("updateQuality", () => {
